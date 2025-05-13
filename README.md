@@ -1,5 +1,7 @@
 # Where's Waldo - Flower Edition 🌸
 
+Find the link to the game here! - https://find-the-flower.onrender.com/
+
 A delightful and interactive game where you help a lost flower find its way home! This game combines beautiful flower imagery with engaging gameplay to create a fun and educational experience.
 
 ## How to Play 🎮

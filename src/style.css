@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+/**
+ * style.css
+ * Global styles for the SVG Shape Finder game
+ *
+ * This file:
+ * - Sets up basic body styling
+ * - Styles the target card and container
+ * - Provides styling for game UI elements
+ * - Defines layout and visual appearance
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+  font-family: 'EB Garamond', serif;
+  font-optical-sizing: auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Target card styles */
+.target-card {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10001;
+  pointer-events: auto;
+}
+
+.target-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  z-index: 10002;
+}
+
+.target-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10003;
+  pointer-events: auto;
+}
+
+.target-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10004;
+  pointer-events: auto;
+}
+
+.target-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 10005;
+  pointer-events: auto;
+}
+
+/* Score display styles */
+.score-display {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 10001;
+  pointer-events: auto;
+}
+
+/* Misses display styles */
+.misses-display {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 10001;
+  pointer-events: auto;
+}
+
+/* Loading overlay styles */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10006;
+  pointer-events: auto;
+}
+
+.loading-text {
+  color: white;
+  font-family: 'EB Garamond', serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Error message styles */
+.error-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 10007;
+  pointer-events: auto;
+}

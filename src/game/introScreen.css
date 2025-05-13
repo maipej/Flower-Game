@@ -1,0 +1,145 @@
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.intro-card {
+  background-color: black;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  height: 80vh;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  color: #FFF49F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 44px;
+}
+
+.intro-card.transitioning {
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 140px;
+  transform: none;
+  border: 2px solid #FFF49F;
+  padding: 1rem;
+  font-size: 24px;
+}
+
+.intro-text {
+  display: block;
+  margin-bottom: 0;
+  color: #FFF49F;
+  transition: opacity 0.3s ease;
+  font-size: 44px;
+  font-weight: 700;
+}
+.intro-text-after {
+  margin-top: 40px;
+  margin-bottom: 00px;
+  display: none;
+}
+
+.intro-card.transitioning .intro-text {
+  opacity: 0;
+}
+
+.flower-container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 200px; */
+  transition: all 0.5s ease;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 300px;
+  margin-top: 48px;
+  font-size: 20px;
+  color: white;
+}
+
+.about-me-title {
+  font-weight: 800;
+}
+.flower-description {
+  font-weight: 500;
+}
+.flower-name {
+  font-weight: 700;
+}
+
+.intro-card.transitioning .flower-container {
+  margin: -0.3rem 0 0 0;
+  min-height: 100%;
+}
+
+.flower-image {
+  /* max-width: 100px; */
+  max-height: 100px;
+  object-fit: contain;
+  transition: all 0.5s ease;
+}
+
+.flower-image-transition {
+  /* max-width: 100px; */
+  min-width: 300px;
+  max-height: 100px;
+}
+
+.intro-card.transitioning .flower-image {
+  display: block;
+  margin: auto;
+  max-height: 80px;
+}
+
+.start-button {
+  background-color: #FFF49F;
+  color: black;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'EB Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.start-button:hover {
+  background-color: #45a049;
+}
+.reload-button:hover {
+  background-color: #45a049 !important;
+}
+.reload-button {
+  transition: all 0.3s ease;
+}
+
+.intro-card.transitioning .start-button {
+  display: none;
+}
